@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch {
       // Offline / direct file mode
-      if (headerStatusText) headerStatusText.textContent = 'Offline Engine Active';
+      if (headerStatusText) headerStatusText.textContent = 'Built-in AI Engine ✨';
       if (headerStatusDot) headerStatusDot.style.backgroundColor = '#0A66C2';
     }
   }
