@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostCraft AI — Create Powerful LinkedIn Posts in Seconds</title>
+  <meta name="description" content="Generate professional, high-performing LinkedIn posts from a single keyword. Free AI-powered LinkedIn post generator.">
+  <meta property="og:title" content="PostCraft AI — LinkedIn Post Generator">
+  <meta property="og:description" content="Generate professional LinkedIn posts from a single word. 100% free, no signup required.">
+  <meta property="og:type" content="website">
+
+  <!-- CSS: correctly linked to css/styles.css (matches actual file location) -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans for headings, Inter for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION HEADER
+  ============================================================ -->
+  <header class="app-header">
+    <div class="header-container">
+
+      <!-- Brand Logo -->
+      <div class="brand">
+        <div class="brand-logo">
+          <!-- FIX: Added explicit width/height attributes to prevent oversized logo when CSS fails to load -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-linkedin" aria-label="LinkedIn logo">
+            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+            <path d="M8.5 18H6V9.5H8.5V18ZM7.25 8.25C6.42 8.25 5.75 7.58 5.75 6.75C5.75 5.92 6.42 5.25 7.25 5.25C8.08 5.25 8.75 5.92 8.75 6.75C8.75 7.58 8.08 8.25 7.25 8.25ZM18 18H15.5V13.8C15.5 12.65 15.05 12 14.1 12C13.05 12 12.45 12.75 12.45 13.8V18H9.95V9.5H12.45V10.7C12.8 10.05 13.65 9.3 14.85 9.3C16.5 9.3 18 10.4 18 12.65V18Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">PostCraft AI</span>
+          <span class="badge">LinkedIn Assistant</span>
+        </div>
+      </div>
+
+      <!-- Nav Links (desktop) -->
+      <nav class="nav-links" aria-label="Site navigation">
+        <a href="#generator" class="nav-link">Generator</a>
+        <a href="#how-it-works" class="nav-link">How it Works</a>
+        <a href="#footer" class="nav-link">About</a>
+      </nav>
+
+      <!-- Header Status Chip -->
+      <div class="header-meta">
+        <span class="status-indicator" id="header-status-indicator">
+          <span class="dot" id="header-status-dot"></span>
+          <span id="header-status-text">Free AI Engine</span>
+        </span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+        </svg>
+        AI-Powered • 100% Free • No Signup Required
+      </div>
+
+      <h1 class="hero-heading">
+        Create Powerful<br>
+        <span class="hero-heading-accent">LinkedIn Posts</span> in Seconds
+      </h1>
+
+      <p class="hero-subheading">
+        Type any topic, keyword, or idea. PostCraft AI instantly crafts a professional,
+        high-engagement LinkedIn post with a strong hook, structured value, and targeted hashtags.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>6</strong>
+          <span>Post Components</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>4–6</strong>
+          <span>Smart Hashtags</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>0</strong>
+          <span>Cost or Signup</span>
+        </div>
+      </div>
+
+      <a href="#generator" class="hero-cta-btn" aria-label="Go to post generator">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+        </svg>
+        Start Generating for Free
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       HOW IT WORKS (3-Step)
+  ============================================================ -->
+  <section class="how-section" id="how-it-works">
+    <div class="how-container">
+      <h2 class="how-title">How It Works</h2>
+      <p class="how-subtitle">From a single word to a publish-ready LinkedIn post in under 10 seconds.</p>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-number">1</div>
+          <h3>Enter Your Topic</h3>
+          <p>Type any keyword — a skill, idea, lesson, or industry trend you want to write about.</p>
+        </div>
+        <div class="how-step-arrow" aria-hidden="true">→</div>
+        <div class="how-step">
+          <div class="step-number">2</div>
+          <h3>Choose Your Tone</h3>
+          <p>Pick the writing style that matches your voice — Professional, Inspirational, Storytelling, and more.</p>
+        </div>
+        <div class="how-step-arrow" aria-hidden="true">→</div>
+        <div class="how-step">
+          <div class="step-number">3</div>
+          <h3>Generate & Copy</h3>
+          <p>Review your post, edit inline if needed, then copy it straight to LinkedIn with one click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MAIN DASHBOARD (Generator + Preview)
+  ============================================================ -->
+  <main class="dashboard-wrapper" id="generator">
+    <div class="dashboard-container">
+
+      <!-- ─── LEFT PANEL: Controls & Input ─── -->
+      <section class="panel panel-controls">
+        <div class="panel-header">
+          <h2 class="panel-title">Post Creator</h2>
+          <p class="panel-subtitle">Enter any single word or short topic to craft a human-written LinkedIn post.</p>
+        </div>
+
+        <form id="generator-form" class="generator-form" onsubmit="return false;" novalidate>
+
+          <!-- Topic Input -->
+          <div class="form-group">
+            <label for="topic-input" class="form-label">
+              Topic or Keyword
+              <span class="required" aria-label="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <input
+                type="text"
+                id="topic-input"
+                class="form-input"
+                placeholder="e.g., Leadership, Python, Remote Work, Career Growth..."
+                autocomplete="off"
+                maxlength="120"
+                aria-required="true"
+                aria-describedby="topic-hint"
+              >
+              <button type="button" id="btn-clear-input" class="btn-clear-input hidden" title="Clear input" aria-label="Clear topic input">✕</button>
+            </div>
+            <p class="input-hint" id="topic-hint">Works with a single word, short phrase, or any professional idea.</p>
+          </div>
+
+          <!-- Quick Starter Chips -->
+          <div class="quick-topics">
+            <span class="quick-topics-label">Popular topics:</span>
+            <div class="chips-list" role="group" aria-label="Topic suggestions">
+              <button type="button" class="chip" data-topic="Python">🐍 Python</button>
+              <button type="button" class="chip" data-topic="Artificial Intelligence">🤖 AI</button>
+              <button type="button" class="chip" data-topic="Leadership">🎯 Leadership</button>
+              <button type="button" class="chip" data-topic="Web Development">💻 Web Dev</button>
+              <button type="button" class="chip" data-topic="Career Growth">📈 Career Growth</button>
+              <button type="button" class="chip" data-topic="Remote Work">🏡 Remote Work</button>
+            </div>
+          </div>
+
+          <!-- Tone Selector -->
+          <!-- IMPORTANT: value attributes are kept identical to what app.js and generator.js expect -->
+          <div class="form-group">
+            <label for="tone-select" class="form-label">Post Tone</label>
+            <div class="select-wrapper">
+              <svg class="select-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <select id="tone-select" class="form-select" aria-label="Select post tone and framework">
+                <!-- value attributes match JS engine keys exactly — DO NOT change them -->
+                <option value="thought-leadership" selected>💡 Thought Leadership — Industry insights & vision</option>
+                <option value="story">📖 Storytelling — Personal journey & lessons learned</option>
+                <option value="tips-listicle">✅ Professional Tips — Actionable frameworks & guides</option>
+                <option value="contrarian">🔥 Inspirational — Bold perspectives & motivation</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Author Profile Customizer (collapsible) -->
+          <div class="form-group author-config-group">
+            <details class="author-details">
+              <summary>
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+                Customize Preview Profile <span class="optional-label">(optional)</span>
+              </summary>
+              <div class="author-fields">
+                <div class="author-field">
+                  <label for="author-name">Your Name</label>
+                  <input type="text" id="author-name" class="form-input-sm" value="Alex Morgan" placeholder="Your Name" maxlength="60">
+                </div>
+                <div class="author-field">
+                  <label for="author-headline">Professional Headline</label>
+                  <input type="text" id="author-headline" class="form-input-sm"
+                    value="Founder & Tech Strategist | Building the future of work"
+                    placeholder="Your LinkedIn Headline" maxlength="120">
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <!-- Generate Button -->
+          <div class="form-actions">
+            <button type="button" id="btn-generate" class="btn btn-primary btn-generate" aria-label="Generate LinkedIn post">
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+              </svg>
+              <span>Generate Post</span>
+            </button>
+            <p class="shortcut-hint">Press <kbd>Enter</kbd> to generate</p>
+          </div>
+
+        </form>
+
+        <!-- Post Anatomy Tips -->
+        <div class="pro-tips-card">
+          <div class="pro-tips-header">
+            <svg class="pro-tips-icon" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <strong>What every generated post includes</strong>
+          </div>
+          <ul class="pro-tips-list">
+            <li><strong>Hook:</strong> A scroll-stopping 1–2 line opener.</li>
+            <li><strong>Introduction:</strong> Context that draws readers in.</li>
+            <li><strong>Value:</strong> Actionable insights with clean formatting.</li>
+            <li><strong>Insight:</strong> A practitioner-level professional observation.</li>
+            <li><strong>Call to Action:</strong> A question that invites comments.</li>
+            <li><strong>Hashtags:</strong> 4–6 targeted tags for LinkedIn reach.</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ─── RIGHT PANEL: LinkedIn Preview & Actions ─── -->
+      <section class="panel panel-preview">
+
+        <!-- Preview Header with toolbar -->
+        <div class="panel-header preview-header">
+          <div class="preview-title-wrap">
+            <h2 class="panel-title">LinkedIn Preview</h2>
+            <span class="preview-indicator" aria-label="Live render indicator">Live Render</span>
+          </div>
+
+          <!-- Action Toolbar: Copy, Regenerate, Clear -->
+          <div class="toolbar-actions" id="toolbar-actions" role="toolbar" aria-label="Post actions">
+            <button type="button" id="btn-copy" class="btn btn-secondary" title="Copy post text to clipboard" aria-label="Copy post to clipboard">
+              <svg class="btn-icon-sm" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+              </svg>
+              <span>Copy</span>
+            </button>
+
+            <button type="button" id="btn-regenerate" class="btn btn-secondary" title="Generate a new variation" aria-label="Regenerate post with same topic">
+              <svg class="btn-icon-sm" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+              </svg>
+              <span>Regenerate</span>
+            </button>
+
+            <button type="button" id="btn-clear" class="btn btn-ghost" title="Clear everything and start over" aria-label="Clear all content">
+              <svg class="btn-icon-sm" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+              </svg>
+              <span>Clear</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Post Stats Bar -->
+        <div class="stats-bar" id="stats-bar" role="status" aria-live="polite" aria-label="Post statistics">
+          <div class="stat-item">
+            <span class="stat-label">Characters:</span>
+            <strong id="stat-char-count">0</strong>
+          </div>
+          <div class="stat-divider" aria-hidden="true">•</div>
+          <div class="stat-item">
+            <span class="stat-label">Words:</span>
+            <strong id="stat-word-count">0</strong>
+          </div>
+          <div class="stat-divider" aria-hidden="true">•</div>
+          <div class="stat-item">
+            <span class="stat-label">Read Time:</span>
+            <strong id="stat-read-time">0s</strong>
+          </div>
+          <div class="stat-divider" aria-hidden="true">•</div>
+          <div class="stat-item">
+            <span class="stat-label">Hashtags:</span>
+            <strong id="stat-hashtag-count">0</strong>
+          </div>
+        </div>
+
+        <!-- LinkedIn Card Container -->
+        <div class="linkedin-card-container">
+
+          <!-- Empty State -->
+          <div id="preview-empty-state" class="preview-empty-state" aria-label="Empty preview state">
+            <div class="empty-illustration" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" class="empty-icon" aria-hidden="true">
+                <rect x="6" y="8" width="36" height="32" rx="4" stroke="#CBD5E1" stroke-width="2.5"/>
+                <circle cx="16" cy="18" r="4" fill="#E2E8F0"/>
+                <rect x="23" y="15" width="14" height="3" rx="1.5" fill="#CBD5E1"/>
+                <rect x="23" y="21" width="9" height="3" rx="1.5" fill="#E2E8F0"/>
+                <rect x="12" y="28" width="24" height="2" rx="1" fill="#E2E8F0"/>
+                <rect x="12" y="33" width="18" height="2" rx="1" fill="#E2E8F0"/>
+              </svg>
+            </div>
+            <h3>Your post preview appears here</h3>
+            <p>Enter a topic like <em>"Leadership"</em> or click a suggestion above, then press <strong>Generate Post</strong>.</p>
+          </div>
+
+          <!-- Loading Skeleton -->
+          <div id="preview-loading-skeleton" class="preview-loading-skeleton hidden" aria-live="polite" aria-label="Generating post">
+            <div class="skeleton-header">
+              <div class="skeleton-avatar pulse"></div>
+              <div class="skeleton-user-meta">
+                <div class="skeleton-line pulse w-40"></div>
+                <div class="skeleton-line pulse w-70"></div>
+                <div class="skeleton-line pulse w-25"></div>
+              </div>
+            </div>
+            <div class="skeleton-body">
+              <div class="skeleton-line pulse w-90"></div>
+              <div class="skeleton-line pulse w-85"></div>
+              <div class="skeleton-space"></div>
+              <div class="skeleton-line pulse w-95"></div>
+              <div class="skeleton-line pulse w-80"></div>
+              <div class="skeleton-line pulse w-75"></div>
+              <div class="skeleton-space"></div>
+              <div class="skeleton-line pulse w-60"></div>
+              <div class="skeleton-space"></div>
+              <div class="skeleton-line pulse w-50"></div>
+            </div>
+            <div class="skeleton-status-ticker">
+              <div class="spinner-dot" aria-hidden="true"></div>
+              <span id="loading-status-text" aria-live="polite">Crafting your post...</span>
+            </div>
+          </div>
+
+          <!-- LinkedIn Post Card -->
+          <article id="linkedin-post-card" class="linkedin-card hidden" aria-label="LinkedIn post preview">
+
+            <!-- Card Header -->
+            <div class="card-header">
+              <div class="author-avatar" id="card-avatar" aria-label="Author avatar">
+                <span class="avatar-initials" id="avatar-initials">AM</span>
+              </div>
+              <div class="author-info">
+                <div class="author-name-row">
+                  <h3 class="author-name" id="card-author-name">Alex Morgan</h3>
+                  <span class="connection-degree">• 1st</span>
+                </div>
+                <p class="author-headline" id="card-author-headline">Founder &amp; Tech Strategist | Building the future of work</p>
+                <div class="post-timestamp-row">
+                  <span class="timestamp" id="card-timestamp">Just now</span>
+                  <span class="timestamp-separator" aria-hidden="true">•</span>
+                  <span class="edited-flag">Edited</span>
+                  <span class="timestamp-separator" aria-hidden="true">•</span>
+                  <svg class="globe-icon" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" title="Shared with Public" aria-label="Public post">
+                    <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 0110.87-4.832L10.22 4.5a3.5 3.5 0 00-3.5 3.5v.5h-1a1 1 0 00-1 1v1.5H3.5a1 1 0 00-1 1v.09A6.473 6.473 0 011.5 8zm7.5 6.485V13a2 2 0 012-2h1.5a.5.5 0 00.5-.5v-1a2 2 0 012-2v-.108A6.502 6.502 0 019 14.485z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-options">
+                <button type="button" class="btn-more-options" aria-label="More options" title="More options">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <circle cx="5" cy="12" r="2"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <circle cx="19" cy="12" r="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Post Body (editable) -->
+            <div class="card-content">
+              <div
+                id="post-content-text"
+                class="post-text-body"
+                contenteditable="true"
+                spellcheck="true"
+                title="Click anywhere to edit before copying"
+                aria-label="Generated post content — click to edit"
+                role="textbox"
+                aria-multiline="true"
+              >
+                <!-- Generated post content injected here by app.js -->
+              </div>
+            </div>
+
+            <!-- Social Metrics Bar -->
+            <div class="card-metrics">
+              <div class="reactions-count">
+                <span class="reaction-icons" aria-hidden="true">
+                  <span class="icon-bubble icon-like" title="Like">👍</span>
+                  <span class="icon-bubble icon-celebrate" title="Celebrate">👏</span>
+                  <span class="icon-bubble icon-insight" title="Insightful">💡</span>
+                </span>
+                <span class="reactions-number" id="reactions-count-display">482</span>
+              </div>
+              <div class="comments-reposts-count">
+                <span id="comments-count-display">64 comments</span>
+                <span class="count-separator" aria-hidden="true">•</span>
+                <span id="reposts-count-display">19 reposts</span>
+              </div>
+            </div>
+
+            <!-- Action Footer Buttons -->
+            <div class="card-actions" role="group" aria-label="Post actions">
+              <button type="button" class="card-action-btn" id="btn-like-action" aria-pressed="false" aria-label="Like this post">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="action-icon" aria-hidden="true">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                </svg>
+                <span>Like</span>
+              </button>
+
+              <button type="button" class="card-action-btn" aria-label="Comment on this post">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="action-icon" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>Comment</span>
+              </button>
+
+              <button type="button" class="card-action-btn" aria-label="Repost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="action-icon" aria-hidden="true">
+                  <path d="M17 1l4 4-4 4"/>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                  <path d="M7 23l-4-4 4-4"/>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                </svg>
+                <span>Repost</span>
+              </button>
+
+              <button type="button" class="card-action-btn" aria-label="Send to a connection">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="action-icon" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                <span>Send</span>
+              </button>
+            </div>
+
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- ============================================================
+       PROFESSIONAL FOOTER
+  ============================================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+            <path d="M8.5 18H6V9.5H8.5V18ZM7.25 8.25C6.42 8.25 5.75 7.58 5.75 6.75C5.75 5.92 6.42 5.25 7.25 5.25C8.08 5.25 8.75 5.92 8.75 6.75C8.75 7.58 8.08 8.25 7.25 8.25ZM18 18H15.5V13.8C15.5 12.65 15.05 12 14.1 12C13.05 12 12.45 12.75 12.45 13.8V18H9.95V9.5H12.45V10.7C12.8 10.05 13.65 9.3 14.85 9.3C16.5 9.3 18 10.4 18 12.65V18Z" fill="white"/>
+          </svg>
+          <span class="footer-brand-name">PostCraft AI</span>
+        </div>
+        <p class="footer-tagline">Generate professional LinkedIn posts in seconds. Free, private, and always improving.</p>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Features</h4>
+          <ul>
+            <li>6-Part Post Structure</li>
+            <li>Smart Hashtag Engine</li>
+            <li>Live LinkedIn Preview</li>
+            <li>One-Click Copy</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Privacy & Security</h4>
+          <ul>
+            <li>No data stored or sent</li>
+            <li>No login required</li>
+            <li>No API keys needed</li>
+            <li>Works fully offline</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 PostCraft AI. Built for LinkedIn professionals. Not affiliated with LinkedIn Corporation.</p>
+    </div>
+  </footer>
+
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+
+  <!-- ============================================================
+       SCRIPTS — paths match actual js/ folder structure
+  ============================================================ -->
+  <script src="js/templates.js"></script>
+  <script src="js/generator.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
